@@ -1,10 +1,11 @@
 import discord
 import os
 import requests
+from dotenv import load_dotenv
+load_dotenv()
 
 client = discord.Client()
-my_secret = os.getenv('token')
-print(my_secret)
+my_secret = os.getenv('MYTOKEN')
 
 @client.event
 async def on_ready():
@@ -28,4 +29,4 @@ async def on_message(message):
   if message.content.startswith(".linkedin"):
     await message.channel.send("Done sire!")
 
-#client.run(my_secret)
+client.run(my_secret)
