@@ -1,2 +1,5 @@
 discord
 python-dotenv
+tweepy
+json
+requests
