@@ -1,9 +1,11 @@
 import discord
 import os
+import requests
 import tweepy
 from keep_alive import keep_alive
-import requests
 import json
+from dotenv import load_dotenv
+load_dotenv()
 
 # Twitter API config
 tauth = tweepy.OAuthHandler(
@@ -143,6 +145,7 @@ async def on_message(message):
       await message.channel.send("Only Design team is allowed to post here")
 
   if message.content.startswith(".linkedin"):
+
     await message.channel.send("Done sire!")
 
 # Run continuously
